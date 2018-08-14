@@ -1,4 +1,3 @@
-===
 Context-aware entity search
 ===
 
