@@ -1,8 +1,8 @@
+-
 &
 & co
 & co.
 & co.oil
--
 a
 advance
 advanced
@@ -18,6 +18,7 @@ apartments
 arthur
 arts
 auto
+automotive
 avery
 bank
 bank of
@@ -29,6 +30,7 @@ buy
 capital
 center
 centers
+cf
 chemical
 chemicals
 chinese
@@ -45,6 +47,7 @@ constellation
 corp
 corp.
 corporation
+cruise
 data
 design
 design systems
@@ -54,6 +57,7 @@ energy
 energy inc
 engineering
 equalty
+equity
 estate
 exchange
 exploration
@@ -70,6 +74,7 @@ first
 foods
 foot
 gas
+ge
 general
 global
 green
@@ -99,12 +104,12 @@ investment
 investment trust
 iron
 jacobs
+james
 kansas
 labs
 lauren
 limited
 line
-ltd
 ltd
 ltd.
 management
@@ -164,6 +169,7 @@ services, inc.
 solution
 solutions
 source
+stanley
 state
 states
 supply
@@ -174,7 +180,7 @@ systems inc
 systems inc.
 technologies
 technologies inc
-technologies inc
+technologies inc.
 technology
 texas
 the
@@ -194,4 +200,12 @@ water
 western
 works
 worldwide
-
+norwegian
+philip
+natural
+southern
+networks
+discovery
+cos
+d
+crown

@@ -63,7 +63,7 @@ def post_process_compnay_name(common_word_set, verbose=False):
     from operator import itemgetter
 
     with open('../resources/black_list.txt', 'r') as r:
-        not_good_company_name = r.readlines()
+        not_good_company_name = [l.strip() for l in r.readlines()]
 
     common_word_set = sorted([c for c in common_word_set if c[0] not in not_good_company_name])
 
@@ -87,8 +87,11 @@ def search_company(q, target_company, verbosity=False, search_size=200):
     common_word_set = get_companies(q, target_company, search_size=search_size)
 
     l1 = post_process_compnay_name(common_word_set, verbosity)
-    res = reduce_by_key(lambda x: sum(x), l1, key=itemgetter(0), value=itemgetter(1))
-    res = sorted(res, key=itemgetter(1), reverse=True)
+    if verbosity:
+        res = l1
+    else:
+        res = reduce_by_key(lambda x: sum(x), l1, key=itemgetter(0), value=itemgetter(1))
+        res = sorted(res, key=itemgetter(1), reverse=True)
 
     return res
 
@@ -103,8 +106,8 @@ if __name__ == '__main__':
 
     sp500_code.head()
 
-    q = 'artificial intelligence'
-    res = search_company(q, some_company, verbosity=False, search_size=200)
+    q = 'iphone'
+    res = search_company(q, some_company, verbosity=False, search_size=1000)
 
     from pprint import pprint
 

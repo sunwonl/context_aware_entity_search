@@ -40,7 +40,7 @@ def lcs(s1, s2, match=lambda x,y: x==y ):
 def get_max(iterable, key=lambda x: x):
     max_one = None
     for item in iterable:
-        if max_one == None:
+        if max_one is None:
             max_one = item
             continue
         elif key(max_one) < key(item):
