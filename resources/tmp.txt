@@ -1,0 +1,101 @@
+2017 Rank	Brand	Sector	Change in Brand Value	Brand Value
+1	Apple	Technology	3%	184,154 $m
+2	Google	Technology	6%	141,703 $m
+3	Microsoft	Technology	10%	79,999 $m
+4	Coca-Cola	Beverages	-5%	69,733 $m
+5	Amazon	Retail	29%	64,796 $m
+6	Samsung	Technology	9%	56,249 $m
+7	Toyota	Automotive	-6%	50,291 $m
+8	Facebook	Technology	48%	48,188 $m
+9	Mercedes-Benz	Automotive	10%	47,829 $m
+10	IBM	Business Services	-11%	46,829 $m
+11	GE	Diversified	3%	44,208 $m
+12	McDonald's	Restaurants	5%	41,533 $m
+13	BMW	Automotive	0%	41,521 $m
+14	Disney	Media	5%	40,772 $m
+15	Intel	Technology	7%	39,459 $m
+16	Cisco	Technology	3%	31,930 $m
+17	Oracle	Technology	3%	27,466 $m
+18	Nike	Sporting Goods	8%	27,021 $m
+19	Louis Vuitton	Luxury	-4%	22,919 $m
+20	Honda	Automotive	3%	22,696 $m
+21	SAP	Technology	6%	22,635 $m
+22	Pepsi	Beverages	1%	20,491 $m
+23	H&M	Apparel	-10%	20,488 $m
+24	Zara	Apparel	11%	18,573 $m
+25	IKEA	Retail	4%	18,472 $m
+26	Gillette	FMCG	-9%	18,200 $m
+27	American Express	Financial Services	-3%	17,787 $m
+28	Pampers	FMCG	2%	16,416 $m
+29	UPS	Logistics	7%	16,387 $m
+30	J.P. Morgan	Financial Services	11%	15,749 $m
+31	Budweiser	Alcohol	2%	15,375 $m
+32	Hermès	Luxury	11%	14,210 $m
+33	Ford	Automotive	5%	13,643 $m
+34	eBay	Retail	1%	13,224 $m
+35	Hyundai	Automotive	5%	13,193 $m
+36	NESCAFÉ	Beverages	1%	12,661 $m
+37	Accenture	Business Services	4%	12,471 $m
+38	Audi	Automotive	2%	12,023 $m
+39	Nissan	Automotive	4%	11,534 $m
+40	Volkswagen	Automotive	1%	11,522 $m
+41	Philips	Electronics	2%	11,519 $m
+42	AXA	Financial Services	5%	11,073 $m
+43	Kellogg's	FMCG	-6%	10,972 $m
+44	Goldman Sachs	Financial Services	16%	10,864 $m
+45	L'Oréal	FMCG	-2%	10,674 $m
+46	Citi	Financial Services	3%	10,599 $m
+47	HSBC	Financial Services	1%	10,534 $m
+48	Porsche	Automotive	6%	10,129 $m
+49	Allianz	Financial Services	6%	10,059 $m
+50	Siemens	Diversified	6%	9,982 $m
+51	Gucci	Luxury	6%	9,969 $m
+52	Canon	Electronics	-12%	9,788 $m
+53	HP	Technology	-8%	9,541 $m
+54	Danone	FMCG	1%	9,322 $m
+55	adidas	Sporting Goods	17%	9,216 $m
+56	Adobe	Technology	19%	9,060 $m
+57	Hewlett Packard Enterprise	Technology	-19%	8,951 $m
+58	3M	Diversified	9%	8,947 $m
+59	Nestlé	FMCG	0%	8,728 $m
+60	Starbucks	Restaurants	16%	8,704 $m
+61	Sony	Electronics	2%	8,474 $m
+62	Colgate	FMCG	-1%	8,325 $m
+63	Morgan Stanley	Financial Services	14%	8,205 $m
+64	Visa	Financial Services	1%	7,815 $m
+65	Cartier	Luxury	-2%	7,547 $m
+66	Thomson Reuters	Media	4%	7,100 $m
+67	LEGO	FMCG	5%	7,024 $m
+68	Banco Santander	Financial Services	8%	6,702 $m
+69	Kia	Automotive	6%	6,683 $m
+70	Huawei	Technology	14%	6,676 $m
+71	Mastercard	Financial Services	11%	6,350 $m
+72	FedEx	Logistics	12%	6,255 $m
+73	Land Rover	Automotive	7%	6,095 $m
+74	Johnson & Johnson	FMCG	4%	6,041 $m
+75	Panasonic	Electronics	-6%	5,983 $m
+76	DHL	Logistics	0%	5,715 $m
+77	Harley-Davidson	Automotive	3%	5,671 $m
+78	Netflix	Media	NEW	5,592 $m
+79	Discovery	Media	-9%	5,411 $m
+80	PayPal	Financial Services	12%	5,408 $m
+81	Tiffany & Co.	Luxury	-6%	5,394 $m
+82	Jack Daniel's	Alcohol	3%	5,332 $m
+83	KFC	Restaurants	-7%	5,313 $m
+84	Salesforce.com	Technology	NEW	5,224 $m
+85	Heineken	Alcohol	1%	5,181 $m
+86	Burberry	Luxury	-4%	5,135 $m
+87	MINI	Automotive	3%	5,114 $m
+88	Ferrari	Automotive	NEW	4,876 $m
+89	Caterpillar	Diversified	-10%	4,868 $m
+90	Sprite	Beverages	-6%	4,842 $m
+91	Shell	Energy	5%	4,823 $m
+92	John Deere	Diversified	-1%	4,783 $m
+93	Corona	Alcohol	6%	4,776 $m
+94	Prada	Luxury	-14%	4,716 $m
+95	Dior	Luxury	-7%	4,587 $m
+96	Johnnie Walker	Alcohol	2%	4,405 $m
+97	Smirnoff	Alcohol	1%	4,288 $m
+98	Tesla	Automotive	0%	4,009 $m
+99	Moët & Chandon	Alcohol	-3%	4,006 $m
+100	Lenovo	Technology	-1%	4,004 $m

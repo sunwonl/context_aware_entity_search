@@ -3,6 +3,7 @@ from elasticsearch import Elasticsearch as ES
 from utils import *
 import time
 
+
 def index_sentences(articles):
     index_actions = []
 
@@ -16,7 +17,7 @@ def index_sentences(articles):
     for a in articles:
         all_sents += len(a['sentences'])
         for s in a['sentences']:
-            if len(s[1]) == 0:
+            if (len(s[0].strip()) == 0) or (len(s[1]) == 0):
                 continue
 
             sentence = {'sentence': s[0],

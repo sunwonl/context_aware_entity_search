@@ -59,3 +59,35 @@ def reduce_by_key(func, li, key=lambda x: x, value=lambda x: x):
     return reduced
 
 
+def make_index(li):
+    zipped = list(zip(li, range(len(li))))
+
+    idx = {z[0]: z[1] for z in zipped}
+
+    return idx
+
+
+def list2vec(l, idx):
+    li = [idx[k] for k in l]
+    vec = [len(idx)] * len(idx)
+
+    for i in range(len(li)):
+        vec[li[i]] = i
+
+    return vec
+
+
+def rank_cor(l1, l2, match=lambda x, y: x == y):
+    mat = [[0] * (len(l2) + 1)] * (len(l1) + 1)
+
+    for i in range(1, len(l1) + 1):
+        for j in range(1, len(l2) + 1):
+            if match(l1[i - 1], l2[j - 1]):
+                matched = mat[i - 1][j - 1] + 1 / 2 ** max(i, j)
+            else:
+                matched = 0
+            from_up = mat[i - 1][j]
+            from_left = mat[i][j - 1]
+            mat[i][j] = max(matched, from_up, from_left)
+
+    return mat[len(l1)][len(l2)] / (1 - 1 / 2 ** max(len(l1), len(l2)))

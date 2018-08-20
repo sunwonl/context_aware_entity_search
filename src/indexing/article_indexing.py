@@ -1,6 +1,6 @@
 from elasticsearch.client import IndicesClient as IdxCli
 from elasticsearch import Elasticsearch as ES
-from indexing.data_prepration import reuter_articles
+from src.indexing.data_prepration import reuter_articles
 
 if __name__ == '__main__':
     import time

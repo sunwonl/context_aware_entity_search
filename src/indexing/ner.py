@@ -40,9 +40,9 @@ def extract_entities(doc, fields, ge=get_entities):
     return doc
 
 
-def ee(nlp, article):
+def ee(article, nlp):
     title = article['title']
-    text = article['text']
+    text = article['text'].replace('Our Standards:The Thomson Reuters Trust Principles.', '')
 
     title_ = nlp(title, disable=['tagger', 'parser'])
     text_ = nlp(text, disable=['tagger', 'parser'])
@@ -73,17 +73,21 @@ def ee(nlp, article):
 
 def sentence_split_ner(articles):
     from multiprocessing.dummy import Pool as ThreadPool
+    from functools import partial
     import time
 
-    # ee_func = partial(ee, nlp=nlp)
+    import spacy
+    nlp = spacy.load('en_core_web_sm')
+    nlp.add_pipe(nlp.create_pipe('sentencizer'))
+
+    ee_func = partial(ee, nlp=nlp)
 
     corpus_ee = []
 
     for article_list in articles:
         s = time.time()
         tp = ThreadPool(4)
-
-        result = tp.map(ee, article_list)
+        result = tp.map(ee_func, article_list)
 
         tp.close()
         tp.join()

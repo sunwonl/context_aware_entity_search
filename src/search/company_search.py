@@ -62,7 +62,7 @@ def post_process_compnay_name(common_word_set, verbose=False):
     from collections import defaultdict
     from operator import itemgetter
 
-    with open('../resources/black_list.txt', 'r') as r:
+    with open('../../resources/black_list.txt', 'r') as r:
         not_good_company_name = [l.strip() for l in r.readlines()]
 
     common_word_set = sorted([c for c in common_word_set if c[0] not in not_good_company_name])
