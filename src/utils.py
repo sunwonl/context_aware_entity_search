@@ -77,7 +77,7 @@ def list2vec(l, idx):
     return vec
 
 
-def rank_cor(l1, l2, match=lambda x, y: x == y):
+def custom_eval(l1, l2, match=lambda x, y: x == y):
     mat = [[0] * (len(l2) + 1)] * (len(l1) + 1)
 
     for i in range(1, len(l1) + 1):
@@ -91,3 +91,65 @@ def rank_cor(l1, l2, match=lambda x, y: x == y):
             mat[i][j] = max(matched, from_up, from_left)
 
     return mat[len(l1)][len(l2)] / (1 - 1 / 2 ** max(len(l1), len(l2)))
+
+
+def to_rank(li):
+    tmplist = list(zip(sorted(li), range(len(li))))
+    tmplist.reverse()
+    dd = dict(tmplist)
+
+    return [dd[i]+1 for i in li]
+
+
+def spearman_rank(l1, l2):
+    from scipy.stats import pearsonr
+    r1 = to_rank(l1)
+    r2 = to_rank(l2)
+
+    return pearsonr(r1,r2)[0]
+
+
+def kendall_tau(l1, l2):
+    r1 = to_rank(l1)
+    r2 = to_rank(l2)
+
+    n = len(r1)
+
+    c, nc = (0, 0)
+
+    paired = list(zip(r1,r2))
+
+    for i in range(len(paired)):
+        p1 = paired[i]
+        for j in range(i+1, len(paired)):
+            p2 = paired[j]
+            if ((p1[0] - p2[0]) * (p1[1] - p2[1])) > 0:
+                c += 1
+            elif (p1[0] == p2[0]) or (p1[1] == p2[1]):
+                pass
+            else:
+                nc += 1
+
+    return (c - nc) / (n*(n-1)/2)
+
+
+def goodman_kruskal_gamma(l1, l2):
+    r1 = to_rank(l1)
+    r2 = to_rank(l2)
+
+    c, rc = (0, 0)
+
+    paired = list(zip(r1, r2))
+
+    for i in range(len(paired)):
+        p1 = paired[i]
+        for j in range(i + 1, len(paired)):
+            p2 = paired[j]
+            if ((p1[0] - p2[0]) * (p1[1] - p2[1])) > 0:
+                c += 1
+            elif ((p1[0] - p2[0]) * (p1[1] - p2[1])) < 0:
+                rc +=1
+            else:
+                pass
+
+    return (c - rc) / (c + rc)
