@@ -7,6 +7,7 @@ class Attention(Layer):
     def __init__(self, attend_func, merge_func, **kwargs):
         self.attend_func = attend_func
         self.merge_func = merge_func
+        self.out = None
         super(Attention, self).__init__(**kwargs)
 
     def build(self, input_shapes):
@@ -32,7 +33,7 @@ class Attention(Layer):
 
         pass
 
-    def call(self, inputs):
+    def call(self, inputs, **kwargs):
         i, c = inputs
         attention_weight = self.attend_func(i, c)
         # a = K.permute_dimensions(K.permute_dimensions(attention_weight, (1,0)) * K.permute_dimensions(c, (2,1,0)), (2,1,0))
@@ -73,3 +74,22 @@ class Attention(Layer):
 
     def concat_merge(self, i, a):
         return K.concatenate([i, a], axis=-1)
+
+
+class SimpleMemoryCell(Layer):
+    def __init__(self, mem_size, **kwargs):
+        self.mem_size = mem_size
+
+        super(SimpleMemoryCell, self).__init__(**kwargs)
+
+    def build(self, input_shapes):
+
+        pass
+
+    def call(self, inputs, **kwargs):
+
+        pass
+
+    def compute_output_shape(self, input_shape):
+
+        pass
