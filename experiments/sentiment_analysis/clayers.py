@@ -17,10 +17,8 @@ class Attention(Layer):
             self.attend_func = self.cosine_attend
         elif self.attend_func == 'affine':
             self.attend_func = self.affine_attend
-            self.attend_w = self.add_weight('attned_w', (input_shape[1], context_shape[1]),
-                                            initializer=initializers.get('glorot_uniform'))
-            self.attend_b = self.add_weight('attned_b', (context_shape[1],),
-                                            initializer=initializers.get('glorot_uniform'))
+            self.attend_w = self.add_weight('attend_w', (input_shape[1], context_shape[1]), initializer=initializers.get('glorot_uniform'))
+            self.attend_b = self.add_weight('attend_b', (context_shape[1],), initializer=initializers.get('glorot_uniform'))
         else:
             raise Exception('Invalid attending function:', self.attend_func)
 
